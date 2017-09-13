@@ -1,6 +1,5 @@
-A Minimal RestExpress Server
+Rest Express Server
 ============================
-A template RestExpress project that contains minimal external dependencies.
 
 To run the project via Maven:
 

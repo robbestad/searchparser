@@ -1,14 +1,21 @@
 package no.nrk.origo.searchparser;
 
 import java.util.*;
+
 import com.google.gson.GsonBuilder;
 import org.restexpress.Request;
 import org.restexpress.Response;
+import org.restexpress.common.query.QueryFilter;
+import org.restexpress.common.query.QueryOrder;
+import org.restexpress.common.query.QueryRange;
+import org.restexpress.query.QueryFilters;
+import org.restexpress.query.QueryOrders;
+import org.restexpress.query.QueryRanges;
 
 import java.util.List;
 
-public class SampleController {
-    public SampleController() {
+public class SearchController {
+    public SearchController() {
         super();
     }
 
@@ -34,9 +41,10 @@ public class SampleController {
 //            collectAllTheKeys(keys, value);
 //    }
 
-    public Object create(Request request, Response response) {
+    public void create(Request request, Response response) {
         //TODO: Your 'POST' logic here...
-        return null;
+        System.out.println(request);
+        response.setResponseCreated();
     }
 
     public Object read(Request request, Response response) throws Exception {
@@ -58,6 +66,7 @@ public class SampleController {
 
     public List<Object> readAll(Request request, Response response) {
         //TODO: Your 'GET collection' logic here...
+        System.out.println("Read All");
         return Collections.emptyList();
     }
 

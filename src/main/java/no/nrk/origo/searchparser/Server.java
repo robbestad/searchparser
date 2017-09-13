@@ -6,7 +6,7 @@ import no.nrk.origo.searchparser.serialization.SerializationProvider;
 
 public class Server
 {
-	private static final String SERVICE_NAME = "TODO: Enter service name";
+	private static final String SERVICE_NAME = "Search Parser";
 
 	private RestExpress server;
 	private Configuration config;

@@ -18,7 +18,7 @@ extends Environment
 	private String baseUrl;
 	private int executorThreadPoolSize;
 
-	private SampleController sampleController;
+	private SearchController searchController;
 
 	@Override
 	protected void fillValues(Properties p)
@@ -31,7 +31,7 @@ extends Environment
 
 	private void initialize()
 	{
-		sampleController = new SampleController();
+		searchController = new SearchController();
 	}
 
 	public int getPort()
@@ -49,8 +49,8 @@ extends Environment
 		return executorThreadPoolSize;
 	}
 
-	public SampleController getSampleController()
+	public SearchController getSearchController()
 	{
-		return sampleController;
+		return searchController;
 	}
 }

@@ -18,6 +18,7 @@ public class Constants
 	public class Routes
 	{
 		//TODO: Your Route names here...
+		public static final String SEARCH_POST_ROUTE = "search.post.route";
 		public static final String SINGLE_SAMPLE = "sample.single.route";
 		public static final String SAMPLE_COLLECTION = "sample.collection.route";
 	}

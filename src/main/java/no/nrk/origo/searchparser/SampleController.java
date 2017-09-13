@@ -1,16 +1,7 @@
 package no.nrk.origo.searchparser;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.*;
-
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.google.gson.stream.JsonWriter;
-import org.json.*;
-import com.google.gson.Gson;
 import org.restexpress.Request;
 import org.restexpress.Response;
 
@@ -49,19 +40,20 @@ public class SampleController {
     }
 
     public Object read(Request request, Response response) throws Exception {
-        response.setContentType("application/json");
-        response.addHeader("Cache-Control", "no-cache");
-        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
-        Map<String, Object> map = new HashMap<String, Object>();
+        List<Map<String, Object>> list = new ArrayList<>();
+        Map<String, Object> map = new HashMap<>();
         map.put("Key1", "123456");
         map.put("Key2", "789123");
         list.add(map);
 
-        Gson gson = new GsonBuilder().setPrettyPrinting()
-                .create();
-        String json = gson.toJson(list);
+        response.setContentType("application/json");
+        response.addHeader("Cache-Control", "no-cache");
         response.noSerialization();
-        return json;
+
+        return new GsonBuilder()
+                .setPrettyPrinting()
+                .create()
+                .toJson(list);
     }
 
     public List<Object> readAll(Request request, Response response) {

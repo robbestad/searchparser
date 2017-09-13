@@ -2,18 +2,12 @@ package no.nrk.origo.searchparser;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
 import java.util.*;
 
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import com.oracle.javafx.jmx.json.JSONException;
-import org.json.JSONTokener;
+import org.json.*;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import org.restexpress.Request;
 import org.restexpress.Response;
 
